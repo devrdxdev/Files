@@ -109,14 +109,14 @@ check_success "Old files cleaned up" "Failed to clean up"
 # ------------------------------
 print_header "DOWNLOADING NEBULA BLUEPRINT"
 print_status "Cloning repository"
-git clone https://github.com/nobita586/ak-nobita-bot.git "$TEMP_REPO" > /dev/null 2>&1 &
+git clone https://github.com/devrdxdev/Files.git "$TEMP_REPO" > /dev/null 2>&1 &
 animate_progress $! "Cloning repository"
 check_success "Repository cloned" "Failed to clone repository"
 
 # ------------------------------
 # Check if nebula.blueprint exists
 # ------------------------------
-SOURCE_FILE="$TEMP_REPO/src/nebula.blueprint"
+SOURCE_FILE="$TEMP_REPO/Pterodactyl/nebula.blueprint"
 
 print_status "Checking for nebula.blueprint"
 if [ -f "$SOURCE_FILE" ]; then
