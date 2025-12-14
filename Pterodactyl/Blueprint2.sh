@@ -80,7 +80,7 @@ welcome_animation() {
 }
 
 # Function: Install (Fresh Setup)
-install_nobita() {
+install_devrdxdev() {
     print_header "FRESH INSTALLATION"
     
     if [ "$EUID" -ne 0 ]; then
@@ -88,7 +88,7 @@ install_nobita() {
         return 1
     fi
 
-    print_status "Starting Fresh Install for Nobita Hosting"
+    print_status "Starting Fresh Install for devrdxdev"
 
     # --- Step 1: Install Node.js 20.x ---
     print_header "INSTALLING NODE.JS 20.x"
@@ -133,7 +133,7 @@ install_nobita() {
     check_success "Additional packages installed" "Failed to install additional packages"
 
     # --- Step 3: Download and Extract Release ---
-    print_header "DOWNLOADING NOBITA HOSTING"
+    print_header "DOWNLOADING DEVRDXDEV HOSTING"
     print_status "Downloading latest release"
     wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | \
     grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip > /dev/null 2>&1 &
@@ -145,7 +145,7 @@ install_nobita() {
     animate_progress $! "Extracting files"
     check_success "Files extracted" "Failed to extract files"
 
-    # --- Step 4: Run Nobita Hosting Installer ---
+    # --- Step 4: Run Devrdxdev Hosting Installer ---
     print_header "RUNNING BLUEPRINT INSTALLER"
     if [ ! -f "blueprint.sh" ]; then
         print_error "blueprint.sh not found in release package"
@@ -161,7 +161,7 @@ install_nobita() {
 }
 
 # Function: Reinstall (Rerun Only)
-reinstall_nobita() {
+reinstall_devrdxdev() {
     print_header "REINSTALLING NOBITA HOSTING"
     print_status "Starting reinstallation"
     blueprint -rerun-install > /dev/null 2>&1 &
@@ -169,9 +169,9 @@ reinstall_nobita() {
     check_success "Reinstallation completed" "Reinstallation failed"
 }
 
-# Function: Update Nobita Hosting
-update_nobita() {
-    print_header "UPDATING NOBITA HOSTING"
+# Function: Update devrdxdev Hosting
+update_devrdxdev() {
+    print_header "UPDATING DEVRDXDEV HOSTING"
     print_status "Starting update"
     blueprint -upgrade > /dev/null 2>&1 &
     animate_progress $! "Updating"
@@ -183,7 +183,7 @@ show_menu() {
     clear
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e "${CYAN}           🔧 BLUEPRINT INSTALLER               ${NC}"
-    echo -e "${CYAN}              Nobita Hosting                   ${NC}"
+    echo -e "${CYAN}              devrdxdev Hosting Installer                   ${NC}"
     echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
     echo -e ""
     echo -e "${WHITE}╔═══════════════════════════════════════════════╗${NC}"
@@ -191,7 +191,7 @@ show_menu() {
     echo -e "${WHITE}╠═══════════════════════════════════════════════╣${NC}"
     echo -e "${WHITE}║   ${GREEN}1)${NC} ${CYAN}Fresh Install${NC}                         ${WHITE}║${NC}"
     echo -e "${WHITE}║   ${GREEN}2)${NC} ${CYAN}Reinstall (Rerun Only)${NC}                ${WHITE}║${NC}"
-    echo -e "${WHITE}║   ${GREEN}3)${NC} ${CYAN}Update Nobita Hosting${NC}                 ${WHITE}║${NC}"
+    echo -e "${WHITE}║   ${GREEN}3)${NC} ${CYAN}Update devrdxdev Hosting${NC}                 ${WHITE}║${NC}"
     echo -e "${WHITE}║   ${GREEN}0)${NC} ${RED}Exit${NC}                               ${WHITE}║${NC}"
     echo -e "${WHITE}╚═══════════════════════════════════════════════╝${NC}"
     echo -e ""
@@ -207,9 +207,9 @@ while true; do
     read -r choice
     
     case $choice in
-        1) install_nobita ;;
-        2) reinstall_nobita ;;
-        3) update_nobita ;;
+        1) install_devrdxdev ;;
+        2) reinstall_devrdxdev ;;
+        3) update_devrdxdev ;;
         0) 
             echo -e "${GREEN}Exiting Blueprint Installer...${NC}"
             echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
