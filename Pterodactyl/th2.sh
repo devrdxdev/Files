@@ -186,7 +186,7 @@ echo -e "  ${CYAN}•${NC} Review the blueprint configuration"
 echo -e "  ${CYAN}•${NC} Restart your panel if required"
 echo -e ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}           Thank you for using Nobita-hosting!   ${NC}"
+echo -e "${CYAN}           Thank you for using devrdxdev-hosting!   ${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 
 # Wait for user to see completion message
