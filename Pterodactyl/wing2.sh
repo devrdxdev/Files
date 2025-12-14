@@ -44,7 +44,7 @@ check_success() {
 clear
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${CYAN}           PTERODACTYL WINGS SETUP               ${NC}"
-echo -e "${CYAN}              by Nobita-hosting                  ${NC}"
+echo -e "${CYAN}              by devrdxdev.                      ${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}\n"
 
 # Check if running as root
@@ -254,6 +254,6 @@ fi
 
 echo -e ""
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${CYAN}           Thank you for using Nobita-hosting!   ${NC}"
+echo -e "${CYAN}           Thank you for using devrdxdev!   ${NC}"
 echo -e "${BLUE}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e ""
