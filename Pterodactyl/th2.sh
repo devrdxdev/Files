@@ -98,7 +98,7 @@ check_success "Target directory created" "Failed to create directory"
 # ------------------------------
 # Temp repository folder
 # ------------------------------
-TEMP_REPO="/tmp/ak-nobita-bot"
+TEMP_REPO="/tmp/Files"
 
 print_status "Cleaning up old temporary files"
 rm -rf "$TEMP_REPO" > /dev/null 2>&1
