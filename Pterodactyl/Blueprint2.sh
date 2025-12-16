@@ -112,7 +112,7 @@ install_devrdxdev() {
     animate_progress $! "Installing Node.js"
     check_success "Node.js installed" "Failed to install Node.js"
 
-    # --- Step 2: Install Yarn, Dependencies & Nobita Hosting Release ---
+    # --- Step 2: Install Yarn, Dependencies & Devrdxdev Hosting Release ---
     print_header "INSTALLING DEPENDENCIES"
     print_status "Installing Yarn"
     npm i -g yarn > /dev/null 2>&1 &
@@ -162,7 +162,7 @@ install_devrdxdev() {
 
 # Function: Reinstall (Rerun Only)
 reinstall_devrdxdev() {
-    print_header "REINSTALLING NOBITA HOSTING"
+    print_header "REINSTALLING DEVRDXDEV HOSTING"
     print_status "Starting reinstallation"
     blueprint -rerun-install > /dev/null 2>&1 &
     animate_progress $! "Reinstalling"
